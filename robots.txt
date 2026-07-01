@@ -1,4 +1,2 @@
 User-agent: *
 Disallow: /room_booking/
-
-Sitemap: https://kou-no1.github.io/sitemap.xml
