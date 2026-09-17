@@ -3,201 +3,201 @@
 
   <!-- ポータル -->
   <url>
-    <loc>https://kou-no1.github.io/apli_portal/</loc>
+    <loc>https://manabitane.jp/apli_portal/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- 授業：算数 -->
   <url>
-    <loc>https://kou-no1.github.io/math-planet/</loc>
+    <loc>https://manabitane.jp/math-planet/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/math-portal-01/</loc>
+    <loc>https://manabitane.jp/math-portal-01/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/math-portal-02/</loc>
+    <loc>https://manabitane.jp/math-portal-02/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/math-portal-03/</loc>
+    <loc>https://manabitane.jp/math-portal-03/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/math-portal-04/</loc>
+    <loc>https://manabitane.jp/math-portal-04/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/math-portal-05/</loc>
+    <loc>https://manabitane.jp/math-portal-05/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/math-portal-06/</loc>
+    <loc>https://manabitane.jp/math-portal-06/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- 授業：社会 -->
   <url>
-    <loc>https://kou-no1.github.io/todofuken/</loc>
+    <loc>https://manabitane.jp/todofuken/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/chizukigo/</loc>
+    <loc>https://manabitane.jp/chizukigo/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- 授業：国語 -->
   <url>
-    <loc>https://kou-no1.github.io/yoyaku-navi/</loc>
+    <loc>https://manabitane.jp/yoyaku-navi/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- 授業：理科 -->
   <url>
-    <loc>https://kou-no1.github.io/rika-navi/</loc>
+    <loc>https://manabitane.jp/rika-navi/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/detective-science/</loc>
+    <loc>https://manabitane.jp/detective-science/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- 授業：体育 -->
   <url>
-    <loc>https://kou-no1.github.io/taiiku-navi/</loc>
+    <loc>https://manabitane.jp/taiiku-navi/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- 授業：道徳・全般 -->
   <url>
-    <loc>https://kou-no1.github.io/cocoro_meter/</loc>
+    <loc>https://manabitane.jp/cocoro_meter/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/hidden_hand/</loc>
+    <loc>https://manabitane.jp/hidden_hand/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/thinking_board/</loc>
+    <loc>https://manabitane.jp/thinking_board/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- 学級経営 -->
   <url>
-    <loc>https://kou-no1.github.io/classmon/</loc>
+    <loc>https://manabitane.jp/classmon/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/grouping/</loc>
+    <loc>https://manabitane.jp/grouping/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/Sekigae/</loc>
+    <loc>https://manabitane.jp/Sekigae/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- タイマー -->
   <url>
-    <loc>https://kou-no1.github.io/hachiware_timer/</loc>
+    <loc>https://manabitane.jp/hachiware_timer/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/UFO_Timer/</loc>
+    <loc>https://manabitane.jp/UFO_Timer/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- 抽選 -->
   <url>
-    <loc>https://kou-no1.github.io/gorilla_draw/</loc>
+    <loc>https://manabitane.jp/gorilla_draw/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/mgical_cat_draw/</loc>
+    <loc>https://manabitane.jp/mgical_cat_draw/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/UFO_draw/</loc>
+    <loc>https://manabitane.jp/UFO_draw/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/Bingo/</loc>
+    <loc>https://manabitane.jp/Bingo/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- 教師力向上 -->
   <url>
-    <loc>https://kou-no1.github.io/teacherchi/</loc>
+    <loc>https://manabitane.jp/teacherchi/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- 校外学習 -->
   <url>
-    <loc>https://kou-no1.github.io/kougai_check/</loc>
+    <loc>https://manabitane.jp/kougai_check/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- 校務ツール -->
   <url>
-    <loc>https://kou-no1.github.io/talk-shoken/</loc>
+    <loc>https://manabitane.jp/talk-shoken/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/shugakuji/</loc>
+    <loc>https://manabitane.jp/shugakuji/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/masume/</loc>
+    <loc>https://manabitane.jp/masume/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/kirinuki/</loc>
+    <loc>https://manabitane.jp/kirinuki/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/shukusho/</loc>
+    <loc>https://manabitane.jp/shukusho/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/PDF_renketu/</loc>
+    <loc>https://manabitane.jp/PDF_renketu/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kou-no1.github.io/thumb_print/</loc>
+    <loc>https://manabitane.jp/thumb_print/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
