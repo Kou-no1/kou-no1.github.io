@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>けいさんのほし｜九九・計算練習を冒険に。まなびたね</title>
+    <meta
+      name="description"
+      content="小学校の先生がつくった無料の計算学習Webアプリ「けいさんのほし」。たし算・ひき算・九九・わり算・小数・分数を、自分に合うモードで練習。保護者向けに、はじめ方と学習記録の保存方法をご案内します。"
+    />
+    <link rel="canonical" href="https://manabitane.jp/guide/keisan-no-hoshi/" />
+    <meta property="og:url" content="https://manabitane.jp/guide/keisan-no-hoshi/" />
+    <meta name="theme-color" content="#102b45" />
+    <meta name="referrer" content="no-referrer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta
+      property="og:title"
+      content="けいさんのほし｜おうちの計算練習を、星めぐりの冒険に。"
+    />
+    <meta
+      property="og:description"
+      content="小学校の先生がつくった、遊びながら計算を練習できるWebアプリ。はじめ方・スマホでの使い方・記録の保存方法をご紹介します。"
+    />
+    <meta property="og:image" content="https://manabitane.jp/guide/keisan-no-hoshi/assets/hero-ship.webp" />
+    <meta
+      property="og:image:alt"
+      content="けいさんのほしのキャラクター、くくっち号"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/app-icon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <svg
+      data-lucide-sprite
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      style="position: absolute; width: 0; height: 0; overflow: hidden"
+    >
+      <symbol id="guide-icon-arrow-right" viewBox="0 0 24 24">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </symbol>
+      <symbol id="guide-icon-arrow-up-right" viewBox="0 0 24 24">
+        <path d="M7 7h10v10" />
+        <path d="M7 17 17 7" />
+      </symbol>
+      <symbol id="guide-icon-check" viewBox="0 0 24 24">
+        <path d="M20 6 9 17l-5-5" />
+      </symbol>
+      <symbol id="guide-icon-chevron-down" viewBox="0 0 24 24">
+        <path d="m6 9 6 6 6-6" />
+      </symbol>
+      <symbol id="guide-icon-x" viewBox="0 0 24 24">
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </symbol>
+      <symbol id="guide-icon-smartphone" viewBox="0 0 24 24">
+        <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+        <path d="M12 18h.01" />
+      </symbol>
+      <symbol id="guide-icon-shield-check" viewBox="0 0 24 24">
+        <path
+          d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+        />
+        <path d="m9 12 2 2 4-4" />
+      </symbol>
+      <symbol id="guide-icon-book-open" viewBox="0 0 24 24">
+        <path d="M12 7v14" />
+        <path
+          d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"
+        />
+      </symbol>
+      <symbol id="guide-icon-rocket" viewBox="0 0 24 24">
+        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+        <path
+          d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"
+        />
+        <path
+          d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"
+        />
+        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" />
+      </symbol>
+      <symbol id="guide-icon-timer" viewBox="0 0 24 24">
+        <line x1="10" x2="14" y1="2" y2="2" />
+        <line x1="12" x2="15" y1="14" y2="11" />
+        <circle cx="12" cy="14" r="8" />
+      </symbol>
+      <symbol id="guide-icon-download" viewBox="0 0 24 24">
+        <path d="M12 15V3" />
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+        <path d="m7 10 5 5 5-5" />
+      </symbol>
+      <symbol id="guide-icon-upload" viewBox="0 0 24 24">
+        <path d="M12 3v12" />
+        <path d="m17 8-5-5-5 5" />
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      </symbol>
+      <symbol id="guide-icon-external-link" viewBox="0 0 24 24">
+        <path d="M15 3h6v6" />
+        <path d="M10 14 21 3" />
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+      </symbol>
+      <symbol id="guide-icon-sparkles" viewBox="0 0 24 24">
+        <path
+          d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"
+        />
+        <path d="M20 2v4" />
+        <path d="M22 4h-4" />
+        <circle cx="4" cy="20" r="2" />
+      </symbol>
+    </svg>
+    <a class="skip-link" href="#main">本文へスキップ</a>
+    <aside class="returning-notice" aria-label="以前から遊んでいる方へ">
+      <span>すでに遊んでいる方は、<a href="#existing-record">今の記録で続ける方法</a>をご覧ください。</span>
+    </aside>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="https://manabitane.jp/"
+          aria-label="まなびたねのホームページ"
+        >
+          <img src="assets/app-icon.svg" width="36" height="36" alt="" />
+          <span>まなびたね<small>学びの「やってみたい」を育てる</small></span>
+        </a>
+        <nav class="desktop-nav" aria-label="ページ内ナビゲーション">
+          <a href="#features">できること</a><a href="#modes">３つのモード</a
+          ><a href="#how-to">はじめ方</a><a href="#faq">よくある質問</a>
+        </nav>
+        <a class="button button-small" href="https://manabitane.github.io/keisan-no-hoshi/" data-app-link
+          >ためしてみる<svg class="icon" aria-hidden="true">
+            <use href="#guide-icon-arrow-up-right"></use></svg
+        ></a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <picture class="hero-art"
+          ><source
+            media="(max-width: 1100px)"
+            srcset="assets/app-icon-large.png" />
+          <img
+            src="assets/hero-ship.webp"
+            width="1600"
+            height="660"
+            alt="宇宙船に乗った、緑色のキャラクター「くくっち号」"
+            fetchpriority="high"
+        /></picture>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow hero-eyebrow">小学生のおうち学習に</p>
+            <h1 id="hero-title">けいさんのほし</h1>
+            <p class="hero-message">
+              おうちの計算練習を、<br />星めぐりの冒険に。
+            </p>
+            <p class="hero-description">
+              小学校の先生がつくった、<br />遊びながら計算を練習できるWebアプリ。
+            </p>
+            <a class="button button-hero" href="https://manabitane.github.io/keisan-no-hoshi/" data-app-link
+              >はじめての方：アプリをためす<svg class="icon" aria-hidden="true">
+                <use href="#guide-icon-arrow-right"></use></svg
+            ></a>
+            <p class="hero-note">
+              無料で練習できます <span>／</span> 会員登録不要
+              <span>／</span> 広告なし
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="intro-strip">
+        <div class="container intro-strip-inner">
+          <span><strong>６つの計算の星</strong>から選べる</span
+          ><span><strong>３つのモード</strong>で取り組める</span
+          ><span>記録は<strong>端末・ブラウザ内</strong>に</span>
+        </div>
+      </div>
+
+      <section class="section concerns" aria-labelledby="concerns-title">
+        <div class="container concerns-inner">
+          <div>
+            <p class="eyebrow">こんな日、ありませんか？</p>
+            <h2 id="concerns-title">
+              計算練習の入り口を、<br />少し変えてみませんか。
+            </h2>
+            <p>
+              毎日の練習が、いつも同じでなくても大丈夫。<br
+                class="desktop-only"
+              />その日の気分に合う取り組み方を選べます。
+            </p>
+          </div>
+          <ul class="concern-list">
+            <li>
+              <svg class="icon" aria-hidden="true">
+                <use href="#guide-icon-check"></use></svg
+              >九九をなかなか練習したがらない
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true">
+                <use href="#guide-icon-check"></use></svg
+              >同じ計算のくり返しが単調になりがち
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true">
+                <use href="#guide-icon-check"></use></svg
+              >苦手な問題を、もう一度練習したい
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true">
+                <use href="#guide-icon-check"></use></svg
+              >子どもに合う練習を選びたい
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        class="section features"
+        id="features"
+        aria-labelledby="features-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">けいさんのほしでできること</p>
+            <h2 id="features-title">きょうは、どの星へ行こう？</h2>
+            <p>
+              たし算の最初の一歩から、小数・分数まで。<br />練習したい計算を自分で選んで、出発します。
+            </p>
+          </div>
+          <div class="feature-layout">
+            <figure class="app-figure">
+              <button
+                class="image-zoom"
+                type="button"
+                data-image="assets/app-planets.webp"
+                data-alt="６つの計算の星を選べる、実際のホーム画面"
+              >
+                <img
+                  src="assets/app-planets.webp"
+                  width="1056"
+                  height="771"
+                  loading="lazy"
+                  alt="ホームの星選択画面。たしざん、ひきざん、かけざん、わりざん、小数、分数が並んでいます。"
+                /><span
+                  >画面を大きく見る<svg class="icon" aria-hidden="true">
+                    <use href="#guide-icon-arrow-up-right"></use></svg
+                ></span>
+              </button>
+              <figcaption>
+                実際の星選択画面。画面内のデータは撮影用です。
+              </figcaption>
+            </figure>
+            <div class="feature-copy">
+              <ol class="feature-points">
+                <li>
+                  <span class="point-number">01</span>
+                  <div>
+                    <h3>練習したい計算を選ぶ</h3>
+                    <p>
+                      たし算・ひき算・九九・わり算・小数・分数に対応。段やエリアを選んで練習できます。
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <span class="point-number">02</span>
+                  <div>
+                    <h3>分からないときは、ヒントを</h3>
+                    <p>
+                      九九のまとまりや数直線など、考え方を確かめる表示やヒントを使えます。問題の種類によって表示は異なります。
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <span class="point-number">03</span>
+                  <div>
+                    <h3>苦手な問題にも、もう一度</h3>
+                    <p>
+                      解答の記録をもとに、復習に取り組めます。「にがて」の練習は、各星のメニューから開けます。
+                    </p>
+                  </div>
+                </li>
+              </ol>
+              <div class="planet-labels" aria-label="対応している計算">
+                <span class="add">＋ たし算</span
+                ><span class="subtract">− ひき算</span
+                ><span class="multiply">× 九九</span
+                ><span class="divide">÷ わり算</span
+                ><span class="decimal">0.1 小数</span
+                ><span class="fraction">½ 分数</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section modes" id="modes" aria-labelledby="modes-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">その日の気分で選べる</p>
+            <h2 id="modes-title">じっくりも、わくわくも。</h2>
+            <p>
+              時間を気にせず練習する日も、ゲームに挑戦する日も。<br />３つのモードから、取り組み方を選べます。
+            </p>
+          </div>
+          <div class="mode-tabs" role="tablist" aria-label="３つの学習モード">
+            <button
+              type="button"
+              id="tab-learn"
+              role="tab"
+              aria-controls="panel-learn"
+              aria-selected="true"
+              tabindex="0"
+            >
+              <svg class="icon" aria-hidden="true">
+                <use href="#guide-icon-book-open"></use></svg
+              ><span>おぼえる<small>じっくり練習</small></span>
+            </button>
+            <button
+              type="button"
+              id="tab-play"
+              role="tab"
+              aria-controls="panel-play"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              <svg class="icon" aria-hidden="true">
+                <use href="#guide-icon-rocket"></use></svg
+              ><span>あそぶ<small>ゲームに挑戦</small></span>
+            </button>
+            <button
+              type="button"
+              id="tab-speed"
+              role="tab"
+              aria-controls="panel-speed"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              <svg class="icon" aria-hidden="true">
+                <use href="#guide-icon-timer"></use></svg
+              ><span>スピード<small>時間内に挑戦</small></span>
+            </button>
+          </div>
+          <div
+            class="mode-panel"
+            id="panel-learn"
+            role="tabpanel"
+            aria-labelledby="tab-learn"
+            tabindex="0"
+          >
+            <figure class="app-figure">
+              <button
+                class="image-zoom"
+                type="button"
+                data-image="assets/app-learn.webp"
+                data-alt="九九のまとまり表示と４択のある、おぼえるモードの実画面"
+              >
+                <img
+                  src="assets/app-learn.webp"
+                  width="1280"
+                  height="900"
+                  loading="lazy"
+                  alt="おぼえるモードの実画面。九九の問題、まとまり表示、４つの解答ボタンがあります。"
+                /><span
+                  >画面を大きく見る<svg class="icon" aria-hidden="true">
+                    <use href="#guide-icon-arrow-up-right"></use></svg
+                ></span>
+              </button>
+              <figcaption>おぼえるモード・九九の画面例</figcaption>
+            </figure>
+            <div class="mode-copy">
+              <p class="mode-kicker">おぼえる</p>
+              <h3>「どう考える？」を、<br />自分のペースで。</h3>
+              <p>
+                段やエリアを選び、ヒントを使いながら練習。４択や入力など、問題に応じた答え方で取り組めます。
+              </p>
+              <ul class="plain-list">
+                <li>九九の読み方やまとまりを確かめる</li>
+                <li>時間制限を気にせず、一問ずつ考える</li>
+              </ul>
+              <p class="small-note">
+                九九の覚え方に迷ったら、まずは「おぼえる」から。
+              </p>
+            </div>
+          </div>
+          <div
+            class="mode-panel"
+            id="panel-play"
+            role="tabpanel"
+            aria-labelledby="tab-play"
+            tabindex="0"
+            hidden
+          >
+            <figure class="app-figure">
+              <button
+                class="image-zoom"
+                type="button"
+                data-image="assets/app-play.webp"
+                data-alt="モンスターに計算で挑戦する、あそぶモードの実画面"
+              >
+                <img
+                  src="assets/app-play.webp"
+                  width="1280"
+                  height="900"
+                  loading="lazy"
+                  alt="あそぶモードのモンスターバトル。計算に答えてモンスターに挑戦します。"
+                /><span
+                  >画面を大きく見る<svg class="icon" aria-hidden="true">
+                    <use href="#guide-icon-arrow-up-right"></use></svg
+                ></span>
+              </button>
+              <figcaption>あそぶモード・九九のモンスターバトル</figcaption>
+            </figure>
+            <div class="mode-copy">
+              <p class="mode-kicker">あそぶ</p>
+              <h3>計算の一問が、<br />冒険の一歩に。</h3>
+              <p>
+                九九ではモンスターバトル、ほかの計算の星ではロケットに挑戦。計算に答えながらゲームを楽しめます。
+              </p>
+              <ul class="plain-list">
+                <li>正解してコインや経験値を集める</li>
+                <li>星ごとのボスにも挑戦できる</li>
+              </ul>
+              <p class="small-note">
+                ゲームの内容や解放条件は、星・エリアによって異なります。
+              </p>
+            </div>
+          </div>
+          <div
+            class="mode-panel"
+            id="panel-speed"
+            role="tabpanel"
+            aria-labelledby="tab-speed"
+            tabindex="0"
+            hidden
+          >
+            <figure class="app-figure">
+              <button
+                class="image-zoom"
+                type="button"
+                data-image="assets/app-speed.webp"
+                data-alt="残り時間とスコアが表示される、スピードモードの実画面"
+              >
+                <img
+                  src="assets/app-speed.webp"
+                  width="1280"
+                  height="900"
+                  loading="lazy"
+                  alt="スピードモードの実画面。残り時間、スコア、計算の問題が表示されています。"
+                /><span
+                  >画面を大きく見る<svg class="icon" aria-hidden="true">
+                    <use href="#guide-icon-arrow-up-right"></use></svg
+                ></span>
+              </button>
+              <figcaption>スピードモード・タイムチャレンジの画面例</figcaption>
+            </figure>
+            <div class="mode-copy">
+              <p class="mode-kicker">スピード</p>
+              <h3>時間の中で、<br />どれだけ答えられるかな。</h3>
+              <p>
+                制限時間内に問題へ挑戦し、速さと正確さを確かめるモード。30秒など、選べる時間は画面で確認できます。
+              </p>
+              <ul class="plain-list">
+                <li>練習したい段やエリアを選ぶ</li>
+                <li>自分のスコアや記録に挑戦する</li>
+              </ul>
+              <p class="small-note">
+                速さを競う気分でない日は、「おぼえる」でゆっくりどうぞ。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section collection" aria-labelledby="collection-title">
+        <div class="container collection-layout">
+          <div>
+            <p class="eyebrow">もうひとつの楽しみ</p>
+            <h2 id="collection-title">
+              自分の宇宙船と、<br />仲間を集める冒険へ。
+            </h2>
+            <p>
+              計算に取り組んで、コインや経験値を獲得。<br />集めたアイテムで宇宙船を着せ替えたり、<br
+                class="desktop-only"
+              />図鑑でモンスターや仲間を見たりできます。
+            </p>
+            <p>
+              学習の記録も、ご褒美も、<br />この端末の中に少しずつ残っていきます。
+            </p>
+            <a class="text-link" href="#save-data"
+              >記録を守るために知っておきたいこと<svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="#guide-icon-arrow-right"></use></svg
+            ></a>
+          </div>
+          <figure class="app-figure">
+            <button
+              class="image-zoom"
+              type="button"
+              data-image="assets/app-custom.webp"
+              data-alt="宇宙船のプレビューとアイテム一覧が並ぶ、実際のカスタム画面"
+            >
+              <img
+                src="assets/app-custom.webp"
+                width="1280"
+                height="900"
+                loading="lazy"
+                alt="カスタム画面の例。左にくくっち号、右にアイテム一覧。確認用の初期データなので未入手アイテムが表示されています。"
+              /><span
+                >画面を大きく見る<svg class="icon" aria-hidden="true">
+                  <use href="#guide-icon-arrow-up-right"></use></svg
+              ></span>
+            </button>
+            <figcaption>
+              カスタムの画面例。未入手のアイテムも表示されています。
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section
+        class="section how-to"
+        id="how-to"
+        aria-labelledby="how-to-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">はじめ方は３ステップ</p>
+            <h2 id="how-to-title">最初の出発は、一緒に。</h2>
+            <p>
+              保護者の方と画面を見ながら、取り組みたい練習を選んでみてください。
+            </p>
+          </div>
+          <ol class="steps">
+            <li>
+              <span class="step-label">STEP <strong>01</strong></span>
+              <h3>開いて、初期設定</h3>
+              <p>
+                ブラウザでアプリを開き、よびなやアイコンなどを選びます。実名を入力する必要はありません。
+              </p>
+            </li>
+            <li>
+              <span class="step-label">STEP <strong>02</strong></span>
+              <h3>計算の星を選ぶ</h3>
+              <p>
+                「たしざん」「かけざん」など、練習したい星を選びます。習っている内容に合わせてどうぞ。
+              </p>
+            </li>
+            <li>
+              <span class="step-label">STEP <strong>03</strong></span>
+              <h3>モードを選んで挑戦</h3>
+              <p>
+                じっくり練習するなら「おぼえる」。段やエリアを選んで、最初の一問に取り組みます。
+              </p>
+            </li>
+          </ol>
+          <p class="recovery-tip">
+            <svg class="icon" aria-hidden="true">
+              <use href="#guide-icon-shield-check"></use></svg
+            ><span
+              >すでに遊んでいる方へ。新しく設定し直す前に、<a href="#save-data"
+                >今の記録のバックアップ</a
+              >をご確認ください。</span
+            >
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="section mobile"
+        id="mobile"
+        aria-labelledby="mobile-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">スマホ・タブレットでも</p>
+            <h2 id="mobile-title">
+              いつものブラウザから、<br class="mobile-only" />はじめられます。
+            </h2>
+            <p>
+              アプリストアからのダウンロードは不要です。<br />初めて使うときは、インターネットにつながる環境で開いてください。
+            </p>
+          </div>
+          <div class="install-grid">
+            <article class="install-guide">
+              <div class="install-heading">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#guide-icon-smartphone"></use>
+                </svg>
+                <h3>iPhone・iPad</h3>
+                <span>Safari</span>
+              </div>
+              <ol>
+                <li>アプリをSafariで開く</li>
+                <li>「共有」から「ブックマークを追加」を選ぶ</li>
+                <li>次も同じSafariのブックマークから開く</li>
+              </ol>
+              <p>
+                メニューの位置はOSのバージョンで異なります。
+              </p>
+            </article>
+            <article class="install-guide">
+              <div class="install-heading">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#guide-icon-smartphone"></use>
+                </svg>
+                <h3>Android</h3>
+                <span>Chromeなど</span>
+              </div>
+              <ol>
+                <li>アプリをChromeなどで開く</li>
+                <li>ブラウザのメニューを開く</li>
+                <li>星印か「ブックマークに追加」を選ぶ</li>
+              </ol>
+              <p>
+                次も同じブラウザのブックマークから開いてください。
+              </p>
+            </article>
+          </div>
+          <div class="notice-line">
+            <strong>ブックマークするのは、この紹介ページではなく計算アプリです。</strong>
+            <p>
+              現在の公開版は、ホーム画面に追加すると正しく起動できない場合があります。新しく追加せず、通信できる環境でブラウザからご利用ください。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section save-data"
+        id="save-data"
+        aria-labelledby="save-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">保護者の方に知っておいてほしいこと</p>
+            <h2 id="save-title">
+              大切な記録は、<br class="mobile-only" />バックアップを。
+            </h2>
+            <p>
+              会員登録を必要としない設計です。<br />その代わり、学習記録は<strong>使っている端末・ブラウザ内</strong>に保存されます。
+            </p>
+          </div>
+          <div id="existing-record" class="notice-line">
+            <h3>これまでの記録で続けるには</h3>
+            <p>まず、いつもの端末・ブラウザで、これまで使っていたブックマークやアイコンを開いてください。<a href="https://manabitane.jp/math-planet/">まなびたねの旧版（math-planet）</a>で遊んでいた方は、そちらで続けられます。</p>
+            <p>旧版とこのページで紹介するアプリは保存場所が異なり、記録は自動では移りません。名前入力に戻っても、サイトデータやアプリを削除せず、元の場所で記録を確認してください。</p>
+          </div>
+          <ul class="storage-facts">
+            <li>別端末へ<strong>自動同期しません</strong></li>
+            <li>
+              ブラウザを変えると<strong>記録が見えないことがあります</strong>
+            </li>
+            <li>
+              ホーム画面追加前後でも<strong
+                >保存領域が異なる場合があります</strong
+              >
+            </li>
+          </ul>
+          <div class="backup-layout">
+            <div class="backup-instructions">
+              <article>
+                <span class="backup-icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#guide-icon-download"></use></svg
+                ></span>
+                <div>
+                  <h3>今の端末で、データを保存</h3>
+                  <p>
+                    アプリの「せってい」→「データ」を開き、<strong>「データをほぞんする」</strong>でJSONファイルを書き出します。保存できたファイルと保存先を、ご自身で確認してください。
+                  </p>
+                  <p class="small-note">
+                    ファイル保存が難しい場合は「データをコピーする」を使い、コピーした内容を別の場所に保存します。
+                  </p>
+                </div>
+              </article>
+              <article>
+                <span class="backup-icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#guide-icon-upload"></use></svg
+                ></span>
+                <div>
+                  <h3>移動先で、データを引き継ぐ</h3>
+                  <p>
+                    移動先のアプリで「せってい」→「データ」→<strong>「ファイルからひきつぐ」</strong>を選びます。JSONを貼り付けて「データをひきつぐ」方法もあります。
+                  </p>
+                  <p class="small-note">
+                    復元は現在のデータを上書きします。移動先にも記録がある場合は、そちらも先に保存してください。
+                  </p>
+                </div>
+              </article>
+            </div>
+            <figure class="app-figure backup-figure">
+              <button
+                class="image-zoom"
+                type="button"
+                data-image="assets/app-backup.webp"
+                data-alt="データをほぞんする、コピーする、ファイルからひきつぐボタンがある、実際のデータ画面"
+              >
+                <img
+                  src="assets/app-backup.webp"
+                  width="1024"
+                  height="900"
+                  loading="lazy"
+                  alt="実際のデータ画面。データをほぞんする、データをコピーする、ファイルからひきつぐ、データをひきつぐの操作ができます。"
+                /><span
+                  >画面を大きく見る<svg class="icon" aria-hidden="true">
+                    <use href="#guide-icon-arrow-up-right"></use></svg
+                ></span>
+              </button>
+              <figcaption>
+                設定内のデータ画面の例。画面内のJSONは確認用データです。
+              </figcaption>
+            </figure>
+          </div>
+          <p class="important-note">
+            <strong
+              >記録を消す操作は、引き継ぎの解決方法にしないでください。</strong
+            ><br />機種変更・ブラウザ変更・サイトデータ削除・PWAの削除や再追加の前に、まずバックアップを。プライベートブラウズや端末の容量整理などでも、記録が失われる場合があります。
+          </p>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq" aria-labelledby="faq-title">
+        <div class="container faq-layout">
+          <div>
+            <p class="eyebrow">保護者の方へ</p>
+            <h2 id="faq-title">よくある質問</h2>
+            <p>はじめる前に、<br />気になることを確認できます。</p>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>
+                スマホで使えますか？<svg class="icon" aria-hidden="true">
+                  <use href="#guide-icon-chevron-down"></use>
+                </svg>
+              </summary>
+              <p>
+                はい。スマホのブラウザでアプリを開いて練習できます。インストールは不要です。次も同じブラウザで開けるよう、アプリをブックマークしておくのがおすすめです。
+              </p>
+            </details>
+            <details>
+              <summary>
+                アカウント登録は必要ですか？<svg
+                  class="icon"
+                  aria-hidden="true"
+                >
+                  <use href="#guide-icon-chevron-down"></use>
+                </svg>
+              </summary>
+              <p>
+                現在のアプリは会員登録不要です。初回設定の「よびな」はアカウントではありません。実名やメールアドレスを入力する必要はなく、よびなだけで別端末から記録を取り戻すことはできません。
+              </p>
+            </details>
+            <details>
+              <summary>
+                学習記録はどこに保存されますか？<svg
+                  class="icon"
+                  aria-hidden="true"
+                >
+                  <use href="#guide-icon-chevron-down"></use>
+                </svg>
+              </summary>
+              <p>
+                使っている端末・ブラウザの保存領域に記録されます。サーバーや別端末に自動でバックアップされません。<a
+                  href="#save-data"
+                  >JSONファイルでの保存と引き継ぎ</a
+                >をご利用ください。記録が見えなくなったときは、サイトデータを消さず、以前と同じ端末・ブラウザ・URLかを先に確認してください。
+              </p>
+            </details>
+            <details>
+              <summary>
+                学校のタブレットでも使えますか？<svg
+                  class="icon"
+                  aria-hidden="true"
+                >
+                  <use href="#guide-icon-chevron-down"></use>
+                </svg>
+              </summary>
+              <p>
+                対応ブラウザでサイトが開ければ利用できる場合があります。ただし、学校のフィルタリング・保存制限・年度末の初期化・端末管理設定によって使えない機能があります。学校の先生や管理者のルールに従い、制限を解除・回避しないでください。
+              </p>
+            </details>
+            <details>
+              <summary>
+                オフラインでも使えますか？<svg class="icon" aria-hidden="true">
+                  <use href="#guide-icon-chevron-down"></use>
+                </svg>
+              </summary>
+              <p>
+                通信できる環境でご利用ください。記録は端末に保存されますが、それだけで通信なしでもアプリを開けるわけではありません。
+              </p>
+            </details>
+            <details>
+              <summary>
+                無料で使えますか？ 広告はありますか？<svg
+                  class="icon"
+                  aria-hidden="true"
+                >
+                  <use href="#guide-icon-chevron-down"></use>
+                </svg>
+              </summary>
+              <p>
+                無料です。子ども向け学習画面とこの紹介ページに、広告やアクセス解析は入れていません。
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" aria-labelledby="about-title">
+        <div class="container about-inner">
+          <img
+            src="assets/app-icon.svg"
+            width="88"
+            height="88"
+            loading="lazy"
+            alt="けいさんのほしのアプリアイコン"
+          />
+          <div>
+            <p class="eyebrow">つくっている人</p>
+            <h2 id="about-title">まなびたね</h2>
+            <p>
+              小学校教員が、子どもの学習に役立つアプリや教材を<br
+                class="desktop-only"
+              />個人で制作している教育ブランドです。
+            </p>
+            <p>
+              おうちの「やってみよう」を、ひとつずつ。<br />子どもが学びに向かうきっかけを、形にしています。
+            </p>
+            <a class="text-link" href="https://manabitane.jp/"
+              >まなびたねについて<svg class="icon" aria-hidden="true">
+                <use href="#guide-icon-arrow-up-right"></use></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section final-cta"
+        id="try-app"
+        aria-labelledby="try-title"
+      >
+        <div class="container">
+          <p class="eyebrow">きょうの一問から</p>
+          <h2 id="try-title">「やってみたい」から、<br />はじめよう。</h2>
+          <p>
+            最初は、好きな計算の星をひとつ。<br />お子さんと一緒に、出発してみませんか。
+          </p>
+          <a class="button" href="https://manabitane.github.io/keisan-no-hoshi/" data-app-link
+            >けいさんのほしをためしてみる<svg class="icon" aria-hidden="true">
+              <use href="#guide-icon-arrow-right"></use></svg
+          ></a>
+          <p class="small-note">
+            すでに遊んでいる方は、<a href="#existing-record">今の記録で続ける方法</a>をご確認ください。
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand" href="https://manabitane.jp/">まなびたね</a>
+        <nav aria-label="フッター">
+          <a href="#save-data">記録の保存について</a
+          ><a href="#faq">よくある質問</a
+          ><a
+            href="https://github.com/manabitane/keisan-no-hoshi"
+            target="_blank"
+            rel="noopener noreferrer"
+            >開発リポジトリ<svg class="icon" aria-hidden="true">
+              <use href="#guide-icon-external-link"></use></svg
+          ></a>
+        </nav>
+        <small>© 2026 まなびたね</small>
+      </div>
+    </footer>
+
+    <dialog id="image-dialog" aria-label="アプリ画面を拡大表示">
+      <button
+        class="icon-button dialog-close"
+        type="button"
+        data-close
+        aria-label="拡大画面を閉じる"
+      >
+        <svg class="icon" aria-hidden="true">
+          <use href="#guide-icon-x"></use>
+        </svg></button
+      ><img id="expanded-image" alt="" />
+      <p id="expanded-caption"></p>
+    </dialog>
+  </body>
+</html>
