@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="182" viewBox="0 0 196 182" fill="none">
+  <title>種皮が開いて双葉と根が伸びた芽</title>
+  <defs>
+    <linearGradient id="blade" x1="61" y1="48" x2="160" y2="94" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e6fbb6"/><stop offset=".55" stop-color="#93e5ad"/><stop offset="1" stop-color="#489d85"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="72" y1="113" x2="103" y2="152" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffe8a7"/><stop offset=".42" stop-color="#efb671"/><stop offset="1" stop-color="#af6949"/>
+    </linearGradient>
+  </defs>
+  <!-- The radicle, shoot, and two halves of the seed share one attachment point. -->
+  <path d="M94 136C103 148 98 155 90 161C83 166 78 170 79 176M92 160Q96 163 95 167" stroke="#e9cf9f" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M93 130C107 106 93 90 108 67C113 59 122 52 134 46" stroke="#173d37" stroke-width="8" stroke-linecap="round"/>
+  <path d="M93 130C107 106 93 90 108 67C113 59 122 52 134 46" stroke="#b9e7a0" stroke-width="4" stroke-linecap="round"/>
+  <path d="M104 75C97 61 94 59 85 56" stroke="#b9e7a0" stroke-width="3.5" stroke-linecap="round"/>
+  <g stroke="#183f38" stroke-width="2.1" stroke-linejoin="round">
+    <path d="M102 69C76 80 43 60 21 28C55 25 89 29 101 53Q105 62 102 69Z" fill="url(#blade)"/>
+    <path d="M108 66C109 35 135 14 179 10C170 44 144 70 117 68Z" fill="url(#blade)"/>
+  </g>
+  <path d="M22 29Q67 40 101 67C71 64 47 52 22 29ZM109 65Q144 32 177 12C163 40 140 64 109 65Z" fill="#33816c" opacity=".78"/>
+  <g stroke="#235c50" stroke-width="1.45" stroke-linecap="round">
+    <path d="M100 67Q66 40 28 31M70 47Q68 38 65 34M81 53Q58 53 50 49M91 59Q89 48 83 42"/>
+    <path d="M111 63Q136 37 172 16M128 47Q129 37 133 30M139 38Q151 37 158 32M151 29Q153 23 157 20"/>
+  </g>
+  <path d="M90 135C84 129 85 116 91 109C103 112 110 120 112 129Q113 139 102 145Z" fill="#dd965e" stroke="#5a3e30" stroke-width="2"/>
+  <path d="M98 130Q105 131 110 127" stroke="#ffdb9a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M92 113C86 123 91 130 101 134L99 140L106 145C97 155 80 155 69 147C58 140 61 128 69 119Q79 106 92 105Z" fill="url(#coat)" stroke="#5a3e30" stroke-width="2.2" stroke-linejoin="round"/>
+  <g stroke="#865336" stroke-width="1.5" stroke-linecap="round">
+    <path d="M83 114Q62 137 78 147M81 124Q72 139 86 149M87 133Q87 141 96 145"/>
+  </g>
+  <path d="M65 132Q68 120 81 112" stroke="#ffe9bc" stroke-width="2" stroke-linecap="round"/>
+</svg>
